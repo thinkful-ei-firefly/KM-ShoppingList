@@ -1,8 +1,8 @@
 const STORE = [
     {id: cuid(), name: "apples", checked: false},
-  {id: cuid(), name: "oranges", checked: false},
-  {id: cuid(), name: "milk", checked: true},
-  {id: cuid(), name: "bread", checked: false}
+    {id: cuid(), name: "oranges", checked: false},
+    {id: cuid(), name: "milk", checked: true},
+    {id: cuid(), name: "bread", checked: false}
   ];
 
   function generateItemElement(item, itemIndex, template){
@@ -47,3 +47,25 @@ function handleShoppingList(){
 
 
 $(handleShoppingList);
+
+
+/**
+ * search the heirarchy to find the li
+ * get the id
+ * find that id inside STORE
+ * mark the index of that item in STORE
+ * splice (index, 1)
+ * 
+ * let removeIndex;
+ * STORE.map(item, index => {
+ * if (item.id === li.id)
+ *      removeIndex = index
+ * })
+ * 
+ * STORE.splice(removeIndex,1)
+ * 
+ * search the heirarchy to find the li
+ * get the id
+ * find that id inside STORE
+ * filter => if (id === id of list item)
+ */
